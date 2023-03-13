@@ -40,7 +40,7 @@ function App() {
       >
         글수정
       </button>
-      <div className="list">
+      {/* <div className="list">
         <h4>
           {글제목[0]} <span onClick={함수}>👍🏻</span>
           {따봉}
@@ -51,6 +51,8 @@ function App() {
         <h4>{글제목[1]}</h4>
         <p>2월 17일 발행</p>
       </div>
+      
+
       <div className="list">
         <h4
           onClick={() => {
@@ -60,7 +62,15 @@ function App() {
           {글제목[2]}
         </h4>
         <p>2월 17일 발행</p>
-      </div>
+      </div> */}
+      {글제목.map(function (a, i) {
+        return (
+          <div className="list">
+            <h4>{글제목[i]}</h4>
+            <p>2월 17일 발행</p>
+          </div>
+        );
+      })}
       {modal === true ? <Modal></Modal> : null}
       {/* if 대신 삼항연산자 */}
     </div>
